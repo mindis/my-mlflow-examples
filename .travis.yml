@@ -6,9 +6,14 @@ jobs:
       services:
         - 'docker'
       script:
-          - echo "HELLO WORLD"
-          - echo "notasecret=$NOT_SECRET"
-          - echo "secret=$SECRET"
+        - echo "HELLO WORLD"
+        - echo "notasecret=$NOT_SECRET"
+        - echo "secret=$SECRET"
+        - echo "notasecret=$SH"
+        - echo "secret=$DB"
+      env:
+        - DB=$SECRET
+        - SH=$NOT_SECRET
           
 
 after_success:
